@@ -60,15 +60,14 @@ class AnswerController extends Controller
                     ['user_id', '=', $user_id], 
                     ['survey_id', '=', $survey_id],
 
-                  ])->exists();
+                ])->exists();
         
         // dd($answer);
 
         if($answer){
-            // dd($answer);
-            $surveys = Survey::with('question')->get();
-            return view('admin.dashboard', compact('surveys') )
-                   ->with('error','You already have taken this survey');
+            
+            return redirect()->route('home')
+                   ->with('errors', 'Sorry, You have already taken survey number '. $survey_id .' ...');
 
         } else {
             
@@ -101,7 +100,7 @@ class AnswerController extends Controller
             // }
 
             return redirect()->action('ResultController@show', [$survey_id] )
-                            ->with('messsage','Thank You, Your answers have been saved,');
+                            ->with('message','Thank You, Your answers have been saved,');
             
         }
     

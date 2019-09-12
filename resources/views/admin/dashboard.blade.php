@@ -22,7 +22,7 @@
        
   
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8 col-md-offset-2">
               <div class="panel panel-default">
                   <div class="panel-heading">
                     <h3 class="panel-title">Surveys</h3>
@@ -46,28 +46,9 @@
                   </div>
               </div>
             </div>
-            <div class="col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                      <h3 class="panel-title">Surveys Taken</h3>
-                    </div>
-                    
-                    <div class="panel-body">
-                      
-                      
-                      @if($surveys->isEmpty())
-                          <p>There are no surveys</p>
-                      @else
-                          {{-- @foreach($surveys as $survey)
-                              <li class="list-group-item">
-                                  <a href="/survey/{{ $survey->id }}">{{ $survey->title }}</a>
-                              </li>
-                          @endforeach --}}
-                      @endif
-                    
-                    </div>
-                </div>
-              </div>
+            
+
+            
         </div>
 
         

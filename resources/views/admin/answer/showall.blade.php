@@ -29,9 +29,10 @@
                                                 
                                             </thead>
                                             @foreach($question->answers as $answer)
-                                              
                                                 <tr>
-                                                  <td>{{ ucwords($answer->user_id == 1 ? "admin" : "user" ) }}</td>
+                                                  <td>
+                                                    {{ ucwords($answer->user_id == 1 ? "admin" : "user" ) }}
+                                                  </td>
                                                   <td>{{ $answer->answers }}</td>
                                                 </tr>
                                             @endforeach  

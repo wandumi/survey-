@@ -76,7 +76,8 @@ class QuestionController extends Controller
         $questions->survey()->sync($request->survey);
 
         
-        return redirect()->route('questions.index')->with('message','A new Question has been Added...');
+        return redirect()->route('questions.index')
+               ->with('message','A new Question has been Added...');
     }
 
     /**
@@ -137,7 +138,7 @@ class QuestionController extends Controller
 
         
         return redirect()->route('questions.index')
-               ->with('message','The has been updated...');
+               ->with('message','The Question been updated successfully...');
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\survey;
+use App\User;
 use App\answer;
 use App\question;
 use Illuminate\Http\Request;
@@ -35,19 +36,23 @@ class ResultController extends Controller
         $surveys = Survey::where([
 
                    ['id', '=', $user_id],
-                   
 
             ])->with('question','answers')->get();
 
-      
-        return view('admin.answer.show', compact('surveys', 'answers'))
-                   ->with('message', 'Thank you for time, Here are your answers');
+        $surveys = Survey::all();
+                   
+        return redirect()->route('home')
+               ->with('message', 'Thank you for taking a Survey, Here are your answers');
+               
     }
 
     public function showall($id)
     {
         
         $user_id = auth::id();
+
+        $users = User::all();
+        // dd($users);
        
     
         $surveys = Survey::where([
@@ -56,9 +61,7 @@ class ResultController extends Controller
 
             ])->with('question','answers')->get();
 
-        
-      
-        return view('admin.answer.showall', compact('surveys', 'answers'))
+        return view('admin.answer.showall', compact('surveys', 'answers', 'users'))
                    ->with('message', 'Thank you for time, Here are your answers');
     }
 
