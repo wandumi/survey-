@@ -21,11 +21,22 @@
                                   <a href="#" class="list-group-item active">
                                     <h4 class="list-group-item-heading">Q : {{ $question->question }}</h4>
                                     <p class="list-group-item-text">
-                                        @foreach($question->answers as $answer)
-                                        <p>
-                                          A   : {{ $answer->answers }}
-                                        <p>
-                                      @endforeach   
+                                        <table class="table table-responsive">
+                                            <thead>
+                                                
+                                                  <th>User</th>
+                                                  <th>Answer</th>
+                                                
+                                            </thead>
+                                            @foreach($question->answers as $answer)
+                                              
+                                                <tr>
+                                                  <td>{{ ucwords($answer->user_id == 1 ? "admin" : "user" ) }}</td>
+                                                  <td>{{ $answer->answers }}</td>
+                                                </tr>
+                                            @endforeach  
+                                        </table>
+                                         
                                     </p>
                                   </a>
                                 </div>

@@ -56,11 +56,7 @@ class ResultController extends Controller
 
             ])->with('question','answers')->get();
 
-        // $surveys = survey::where('id', $id)->with('answers')->count();
-
-        // dd($surveys);
-        // dd($surveys);
-        // if($surveys->answers->contains('answers'))
+        
       
         return view('admin.answer.showall', compact('surveys', 'answers'))
                    ->with('message', 'Thank you for time, Here are your answers');
