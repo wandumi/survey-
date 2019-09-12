@@ -35,7 +35,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Roles</th>
+                                <th>User Name</th>
                                 <th>Date</th>
                                 <th>Action</th>
 
@@ -80,7 +80,7 @@
                         <tfoot>
                             <tr>
                                 <th>#</th>
-                                <th>Roles</th>
+                                <th>User Name</th>
                                 <th>Date</th>
                                 <th>Action</th>
                             </tr>
