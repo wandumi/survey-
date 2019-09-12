@@ -61,7 +61,7 @@ class ResultController extends Controller
 
             ])->with('question','answers')->get();
 
-        return view('admin.answer.showall', compact('surveys', 'answers', 'users'))
+        return view('admin.answer.showall', compact('surveys'))
                    ->with('message', 'Thank you for time, Here are your answers');
     }
 
