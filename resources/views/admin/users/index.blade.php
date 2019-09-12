@@ -51,11 +51,9 @@
                                     <td>{{ date ('M j, Y', strtotime($user->created_at)) }}</td>
 
                                     <td>
-                                    <a href="" data-target="#useredit" data-name="{{ $user->name }}" data-email="{{ $user->email }}"
-                                            data-type="{{ $user->type }}" data-password="{{ $user->password }}"
-
-                                        data-toggle="modal" class="fa fa-edit btn btn-sm btn-primary">
+                                    <a href="{{ route('users.edit', $user->id ) }}" class="fa fa-edit btn btn-sm btn-primary">
                                     </a>
+                                    
 
                                         <form id="delete-form-{{ $user->id }}" action="{{ route('users.destroy', $user->id ) }}"
                                                 method="POST" style="display:none" >

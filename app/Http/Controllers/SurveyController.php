@@ -24,6 +24,7 @@ class SurveyController extends Controller
     {
         
         $surveys = Survey::with('question')->get();
+        // dd($surveys);
         return view('admin.dashboard', compact('surveys') );
         
     }

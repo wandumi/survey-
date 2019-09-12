@@ -19,7 +19,7 @@ class AnswerController extends Controller
     public function index()
     {
         $answers = answer::all();
-        $surveys = survey::with('answers')->get();
+        $surveys = survey::has('answers')->get();
         
         // dd($surveys);
         

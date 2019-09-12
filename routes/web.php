@@ -32,6 +32,8 @@ Route::resource('questions', 'QuestionController');
 
 Route::resource('answer', 'AnswerController');
 
+Route::resource('users', 'UserController');
+
 Route::resource('roles', 'RolesController');
 
 Route::resource('result', 'ResultController');

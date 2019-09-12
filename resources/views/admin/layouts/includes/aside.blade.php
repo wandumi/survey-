@@ -74,13 +74,13 @@
               <!-- end of results -->
                 <li class="header">Settings</li>
                 <li class="treeview">
-                  <a href="#"><i class="fa fa-question"></i> <span>Users</span>
+                  <a href=""><i class="fa fa-user"></i> <span>Users</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                       </span>
                   </a>
                   <ul class="treeview-menu">
-                    <li><a href="">View</a></li>
+                    <li><a href="{{ route('users.index') }}">View</a></li>
                     <li><a href="">Add Users</a></li>
                   </ul>
                 </li>

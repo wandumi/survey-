@@ -39,6 +39,14 @@
                         @foreach($surveys as $survey)
                             <li class="list-group-item">
                                 <a href="/survey/{{ $survey->id }}">{{ $survey->title }}</a>
+                                <span>
+                                   {{-- @foreach($survey->question as $question)
+                                       
+                                       @if($number = $question->pluck('id'))
+                                            {{ $number }}
+                                       @endif
+                                   @endforeach --}}
+                                </span>
                             </li>
                         @endforeach
                     @endif
@@ -48,7 +56,7 @@
             </div>
             
 
-            
+
         </div>
 
         

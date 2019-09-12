@@ -20,13 +20,13 @@
 
       <div class="row">
           <div class="col-md-8 col-md-offset-2">
-                 
+                <a href="{{  route('users.index') }}" class="btn btn-success pull-right">Back</a>
             <div class="panel panel-default">
                 <div class="panel-heading">
                
                         <div class="panel-title"><h3>Edit User</h3></div>
                         
-                        <a href="" class="btn btn-success pull-right"></a>
+                        
                
                   
                     
@@ -35,27 +35,27 @@
                     @include('admin.message.success')
                 </div>
                 <div class="panel-body">
-                    <form action="{{ route('users.update', $user->id ) }}}}" method="POST">
+                    <form action=" " method="POST">
 
                         {{ csrf_field() }}
                         {{ method_field('PUT')}}
     
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" name="name"{{ old('name')}}>
+                            <input type="text" id="name" class="form-control" name="name" value="{{ $user->name }}">
                         </div>
     
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" name="email"{{ old('email')}}>
+                            <input type="email" id="email" class="form-control" name="email" value="{{ $user->email }}">
                         </div>
     
                         <select class="form-control" id="role" name="role[]">
-                            @foreach($roles as $role)
+                            {{-- @foreach($roles as $role)
                                 <option value="{!! $role->id !!}" @if(in_array($role->id, $selectedRole\s)) selected="selected" @endif >
                                     {!! $role->display_name !!}
                                 </option>
-                            @endforeach
+                            @endforeach --}}
                         </select>
     
                         <div class="form-group">
@@ -94,7 +94,7 @@
 
                 </div>
             </div>
-          </div>
+          
       </div>
 
 </section>

@@ -5,7 +5,8 @@
         <div class="col-md-8 col-md-offset-2">
           <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 >Surveys Results</h3>
+                <h3 >Surveys Results  <em class="pull-right">(with answers)</em>
+                </h3>
               </div>
               <div>
                   @include('admin.message.success')
