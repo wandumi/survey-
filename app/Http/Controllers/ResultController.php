@@ -62,6 +62,7 @@ class ResultController extends Controller
 
             ])->with('question','answers')->get();
 
+<<<<<<< HEAD
         // $result = Survey::addSelect(['results_to_survey' => function($query){
         //     $query->select('answers')
         //           ->from('answers')
@@ -76,6 +77,9 @@ class ResultController extends Controller
         // https://www.youtube.com/watch?v=OIZmTyMq6cU&list=PLkyrdyGDWthC-yd9n8R3CEauJC4sFl-kj&index=2
 
         return view('admin.answer.showall', compact('surveys', 'answers', 'users'))
+=======
+        return view('admin.answer.showall', compact('surveys'))
+>>>>>>> dbbefb0f6b0f988101010891602d5b2a572be5da
                    ->with('message', 'Thank you for time, Here are your answers');
     }
 
