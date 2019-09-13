@@ -26,6 +26,7 @@ class HomeController extends Controller
     {
         // $surveys = Survey::get();
         $surveys = Survey::has('question')->get();
+        
         return view('admin.dashboard', compact('surveys') );
     }
 
