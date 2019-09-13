@@ -42,7 +42,7 @@ class ResultController extends Controller
         $surveys = Survey::all();
                    
         return redirect()->route('home')
-               ->with('message', 'Thank you for taking a Survey, Here are your answers');
+               ->with('message', 'Thank you for taking this Survey '. $id .'');
                
     }
 
@@ -62,7 +62,7 @@ class ResultController extends Controller
 
             ])->with('question','answers')->get();
         
-        return view('admin.answer.showall', compact('surveys'))
-                           ->with('message', 'Thank you for time Here are your answers');
+        return view('admin.answer.showall', compact('surveys'));
+                           
     }
 }
