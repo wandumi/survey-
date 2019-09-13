@@ -54,12 +54,26 @@ class ResultController extends Controller
         $users = User::all();
         // dd($users);
        
+        // dd($id);
     
         $surveys = Survey::where([
 
                    ['id', '=', $id],
 
             ])->with('question','answers')->get();
+
+        // $result = Survey::addSelect(['results_to_survey' => function($query){
+        //     $query->select('answers')
+        //           ->from('answers')
+        //           ->whereColumn('survey_id', 'answers.survey_id')
+        //           ->limit(10)
+        //           ->latest();
+        //  }
+        // ])->toArray();
+
+        // dd($result);
+
+        // https://www.youtube.com/watch?v=OIZmTyMq6cU&list=PLkyrdyGDWthC-yd9n8R3CEauJC4sFl-kj&index=2
 
         return view('admin.answer.showall', compact('surveys', 'answers', 'users'))
                    ->with('message', 'Thank you for time, Here are your answers');

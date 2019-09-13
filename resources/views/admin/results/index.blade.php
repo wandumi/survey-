@@ -18,7 +18,7 @@
             @else
                 @foreach($surveys as $survey)
                     <li class="list-group-item">
-                        <a href="/result/{{ $survey->id }}">{{ $survey->title }}</a>
+                        <a href="{{ route('result', $survey->id ) }}">{{ $survey->title }}</a>
                     </li>
                 @endforeach
             @endif
