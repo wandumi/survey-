@@ -18,6 +18,8 @@ User
 Username: user@admin.com
 Password: admin123
 
+NOTE: If you seed the database there is no need to configure the email notification 
+
 Then you can login to administrator and create a survey and questions that will belong to the survey created.
 
 The user will be able to view the survey after they have been created, a user can take a survey only once.
